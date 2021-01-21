@@ -612,14 +612,14 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/cpr/Desktop/03_RyanLimKokCheng_Lab17/03_RyanLimKokCheng_Lab17/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/cpr/Desktop/03_RyanLimKokCheng_Lab17/03_RyanLimKokCheng_Lab17/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/cpr/Desktop/03_RyanLimKokCheng_Lab17/03_RyanLimKokCheng_Lab17/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/cpr/Desktop/03_RyanLimKokCheng_Lab17/03_RyanLimKokCheng_Lab17/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/cpr/Desktop/03_RyanLimKokCheng_Lab17/03_RyanLimKokCheng_Lab17/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

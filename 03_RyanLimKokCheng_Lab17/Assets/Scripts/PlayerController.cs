@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     private Animator animator;
-    private AudioSource audiosoure;
+    private AudioSource audiosource;
 
     public AudioClip[] audioClipArray;
 
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
         HealthText.GetComponent<Text>().text = "Health : " + HealthCount;
         Cointext.GetComponent<Text>().text = "Coin : " + coinCount;
 
-        audiosoure = GetComponent<AudioSource>();
+        audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,9 +46,7 @@ public class PlayerController : MonoBehaviour
             HealthCount -= 10;
             HealthText.GetComponent<Text>().text = "Health : " + HealthCount;
 
-            int rand = Random.Range(1, 2);
-
-            audiosoure.PlayOneShot(audioClipArray[rand]);
+            audiosource.PlayOneShot(audioClipArray[2]);
         }
         if (collision.gameObject.tag == "Coin")
         {
@@ -56,7 +54,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             Cointext.GetComponent<Text>().text = "Coin : " + coinCount;
 
-            audiosoure.PlayOneShot(audioClipArray[0]);
+            audiosource.PlayOneShot(audioClipArray[0]);
         }
     }
 
@@ -70,19 +68,23 @@ public class PlayerController : MonoBehaviour
             hVelocity = -Speed;
             transform.localScale = new Vector3(-1, 1, 1);
             animator.SetFloat("xVelocity", Mathf.Abs(hVelocity));
+
+
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             hVelocity = Speed;
             transform.localScale = new Vector3(1, 1, 1);
             animator.SetFloat("xVelocity", Mathf.Abs(hVelocity));
+
+            audiosource.PlayOneShot(audioClipArray[1]);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             vVelocity = jumpForce;
             animator.SetTrigger("Jumptrigger");
 
-            audiosoure.PlayOneShot(audioClipArray[3]);
+            audiosource.PlayOneShot(audioClipArray[3]);
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
         {
